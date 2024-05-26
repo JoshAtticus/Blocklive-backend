@@ -408,7 +408,7 @@ app.get('/active/:blId',(req,res)=>{
 })
 
 app.get('/',(req,res)=>{
-     res.send('wow youre a hacker wow')
+     res.send('It works!')
 })
 
 app.post('/friends/:user/:friend',(req,res)=>{
