@@ -6,7 +6,7 @@ let processes = {}
 function addProcess(pid,url) {
     processes[pid] = {pid,url,status:0}
 }
-addProcess('blocklive','https://blockliveup.atticat.tech/')
+addProcess('blocklive','https://blocklive.atticat.tech/')
 
 function checkAll() {
     Object.keys(processes).forEach(pid=>check(pid))

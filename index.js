@@ -16,7 +16,7 @@ import fsp from 'fs/promises'
 // copied from https://stackoverflow.com/questions/11804202/how-do-i-setup-a-ssl-certificate-for-an-express-js-server
 import os from 'os'
 import path from 'path';
-let homedir = '/home/opc'
+let homedir = '/home/josh'
 // let privateKey = fs.readFileSync( homedir + path.sep + 'letsencrypt/live/spore.us.to/privkey.pem' );
 // let certificate = fs.readFileSync( homedir + path.sep + 'letsencrypt/live/spore.us.to/fullchain.pem' );
 import https from 'https'
@@ -41,7 +41,7 @@ import { installCleaningJob } from './removeOldProjects.js';
 import { addRecent, countRecentShared, saveRecent } from './recentUsers.js';
 
 
-const restartMessage = 'An admin is restarting the blocklive server in 3 seconds... you may lose connection for an instant.'
+const restartMessage = 'An admin is restarting the blocklive server in 3 seconds... you might lose connection for a bit.'
 // Load session and user manager objects
 
 

@@ -12,7 +12,7 @@ cron.schedule(CRON_EXPRESSION, async () => {
     trimRecent()
 },{
     scheduled: true,
-    timezone: "America/Los_Angeles"
+    timezone: "Australia/Perth"
 })
 
 setInterval(saveRecent,1000)
