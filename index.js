@@ -180,7 +180,6 @@ let messageHandlers = {
                let sentTo = project.session.getConnectedUsernames().filter(uname=>uname!=sender?.toLowerCase())
                let loggingMsg = '🔴 FILTERED CHAT: ' + '"' + text + '" [' + sender + '->' + sentTo.join(',') + ' | scratchid: ' + project.scratchId + ']'
                console.error(loggingMsg)
-               postText(loggingMsg)
           return;
           }
 
@@ -191,7 +190,6 @@ let messageHandlers = {
           let sentTo = project.session.getConnectedUsernames().filter(uname=>uname!=sender?.toLowerCase())
           let loggingMsg = '"' + text + '" [' + sender + '->' + sentTo.join(',') + ' | scratchid: ' + project.scratchId + ']'
           console.log(loggingMsg)
-          postText(loggingMsg)
      }
 }
 
