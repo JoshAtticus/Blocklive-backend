@@ -17,13 +17,10 @@ import fsp from 'fs/promises'
 import os from 'os'
 import path from 'path';
 let homedir = '/home/opc'
-let privateKey = fs.readFileSync( homedir + path.sep + 'letsencrypt/live/spore.us.to/privkey.pem' );
-let certificate = fs.readFileSync( homedir + path.sep + 'letsencrypt/live/spore.us.to/fullchain.pem' );
+// let privateKey = fs.readFileSync( homedir + path.sep + 'letsencrypt/live/spore.us.to/privkey.pem' );
+// let certificate = fs.readFileSync( homedir + path.sep + 'letsencrypt/live/spore.us.to/fullchain.pem' );
 import https from 'https'
-const server = https.createServer({
-     key: privateKey,
-     cert: certificate,
-},app);
+const server = https.createServer({},app);
 /////////
 
 import {Server} from 'socket.io'
@@ -40,7 +37,6 @@ import sanitize from 'sanitize-filename';
 
 import { blocklivePath, lastIdPath, loadMapFromFolder, saveMapToFolder, saveMapToFolderAsync, scratchprojectsPath, usersPath} from './filesave.js'
 import { Filter } from './profanity-filter.js';
-import { postText } from './discord-webhook.js';
 import { installCleaningJob } from './removeOldProjects.js';
 import { addRecent, countRecentShared, saveRecent } from './recentUsers.js';
 
