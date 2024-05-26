@@ -6,7 +6,7 @@ let processes = {}
 function addProcess(pid,url) {
     processes[pid] = {pid,url,status:0}
 }
-addProcess('blocklive','https://spore.us.to:4000/')
+addProcess('blocklive','https://blockliveup.atticat.tech/')
 
 function checkAll() {
     Object.keys(processes).forEach(pid=>check(pid))
