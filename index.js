@@ -492,7 +492,7 @@ app.put('/unshare/:id/:to/',(req,res)=>{
 
 
 const port = 4000
-server.listen(port,'0.0.0.0');
+server.listen(port,'127.0.0.0');
 console.log('listening on port ' + port)
 
 // initial handshake:
